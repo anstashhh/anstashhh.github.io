@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV of Aleksandr Nikolskii — Video Post Production, Motion and AI Specialist.">
+  <meta name="theme-color" content="#080909">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <title>Aleksandr Nikolskii — CV</title>
+</head>
+<body data-page="cv">
+  <!--
+  THESIS: A continuous editorial CV reads as one professional story rather than a dashboard of resume cards.
+  OWN-WORLD: Matte black, warm paper, thin rules, square portrait, condensed title, mono copy and vermilion labels.
+  STORY: Visitors understand the specialist's focus, work, skills and education, then download the full CV when supplied.
+  FIRST VIEWPORT: Portrait and large professional title lead; compact prose rows continue across one shared field.
+  FORM: Edit Decision Sheet, approved visual direction, seed 6d0e9949.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <a class="skip-link" href="#main">Skip to CV</a>
+  <header class="site-header" data-site-header></header>
+  <main class="page-main" id="main">
+    <article class="cv-page">
+      <section class="cv-intro">
+        <div class="portrait" data-cv-portrait></div>
+        <div class="cv-intro__copy">
+          <h1 data-cv-name></h1>
+          <p class="cv-intro__title" data-cv-title></p>
+        </div>
+      </section>
+      <section class="cv-row">
+        <h2 class="cv-row__label" data-cv-label="about"></h2>
+        <div class="cv-row__content"><p data-cv-about></p></div>
+      </section>
+      <section class="cv-row">
+        <h2 class="cv-row__label" data-cv-label="work"></h2>
+        <div class="cv-row__content" data-cv-work></div>
+      </section>
+      <section class="cv-row">
+        <h2 class="cv-row__label" data-cv-label="skills"></h2>
+        <div class="cv-row__content"><p data-cv-skills></p></div>
+      </section>
+      <section class="cv-row">
+        <h2 class="cv-row__label" data-cv-label="education"></h2>
+        <div class="cv-row__content"><p data-cv-education></p></div>
+      </section>
+      <footer class="cv-footer"><a class="text-action" data-cv-download href="#"></a></footer>
+    </article>
+  </main>
+  <script src="assets/content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
