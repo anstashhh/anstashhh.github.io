@@ -58,6 +58,7 @@ window.PORTFOLIO_CONTENT = {
     showreel: {
       youtube: "https://youtu.be/9sJGP11F3fg",
       vimeo: "https://vimeo.com/1238836744",
+      vimeoEnabled: false, // Vimeo currently returns "This video does not exist".
       poster: "assets/images/color-reel-poster.webp"
     },
     showreelDuration: "",
@@ -103,6 +104,7 @@ window.PORTFOLIO_CONTENT = {
     showreel: {
       youtube: "https://youtu.be/qvVPLENkPx0",
       vimeo: "https://vimeo.com/1238841970",
+      vimeoEnabled: false, // Re-enable after verifying the public embed.
       poster: "assets/images/compositing-reel-poster.webp"
     },
     showreelDuration: "",

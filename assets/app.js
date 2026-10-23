@@ -123,7 +123,7 @@
   function renderVideo(element, media, label) {
     if (!element) return;
     const config = typeof media === "string" ? { source: media } : (media || {});
-    const providers = ["youtube", "vimeo", "source"].filter((key) => config[key]);
+    const providers = ["youtube", "vimeo", "source"].filter((key) => config[key] && (key !== "vimeo" || config.vimeoEnabled !== false));
     if (!providers.length) {
       element.innerHTML = `<div class="video-placeholder"><span class="video-placeholder__play" aria-hidden="true"></span><strong>${label}</strong><small>${t("labels.addVideo")}</small></div>`;
       element.classList.add("is-empty");

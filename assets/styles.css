@@ -193,7 +193,7 @@ img, video, iframe { display: block; width: 100%; }
   background: #181918;
 }
 
-.portrait img { height: 100%; object-fit: cover; object-position: 50% 0; }
+.portrait img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: 50% 0; }
 .home-cv .portrait { min-height: 0; aspect-ratio: auto; }
 
 .portrait.is-empty {
