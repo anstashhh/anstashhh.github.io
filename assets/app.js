@@ -8,7 +8,7 @@
 
   const dictionary = {
     ru: {
-      nav: { cv: "CV", color: "COLOR GRADING", compositing: "COMPOSITING", motion: "MOTION DESIGN + AI", software: "SOFTWARE", contacts: "КОНТАКТЫ" },
+      nav: { cv: "CV", color: "COLOR GRADING", compositing: "COMPOSITING", motion: "MOTION DESIGN + AI", software: "SOFTWARE", contacts: "CONTACT" },
       skip: { home: "Перейти к разделам", cv: "Перейти к CV", color: "Перейти к работам по цветокоррекции", compositing: "Перейти к композитингу", motion: "Перейти к Motion Design и AI", software: "Перейти к разработкам", contacts: "Перейти к контактам" },
       labels: {
         menu: "Меню", close: "Закрыть меню", language: "Выбор языка", portrait: "ПОРТРЕТ / ДОБАВЬТЕ ФАЙЛ",
@@ -20,7 +20,7 @@
       }
     },
     en: {
-      nav: { cv: "CV", color: "COLOR GRADING", compositing: "COMPOSITING", motion: "MOTION DESIGN + AI", software: "SOFTWARE", contacts: "CONTACTS" },
+      nav: { cv: "CV", color: "COLOR GRADING", compositing: "COMPOSITING", motion: "MOTION DESIGN + AI", software: "SOFTWARE", contacts: "CONTACT" },
       skip: { home: "Skip to work", cv: "Skip to CV", color: "Skip to color grading work", compositing: "Skip to compositing work", motion: "Skip to Motion Design and AI work", software: "Skip to software projects", contacts: "Skip to contacts" },
       labels: {
         menu: "Menu", close: "Close menu", language: "Language selection", portrait: "PORTRAIT / ADD FILE",
