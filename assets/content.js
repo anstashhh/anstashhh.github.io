@@ -89,14 +89,14 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         title: { ru: "Прелюдия", en: "Prelude" },
-        meta: { ru: "ЦВЕТОКОРРЕКЦИЯ", en: "COLOR GRADING" },
+        meta: { ru: "ПОЛНОМЕТРАЖНЫЙ ФИЛЬМ / ЦВЕТОКОРРЕКЦИЯ / 2026", en: "FEATURE FILM / COLOR GRADING / 2026" },
         imageSize: [1920, 1080],
         images: ["assets/images/prelude-01.webp", "assets/images/prelude-02.webp", "assets/images/prelude-03.webp", "assets/images/prelude-04.webp"]
       },
       {
         title: { ru: "Это цитата!", en: "It's a Quote!" },
         kinopoisk: "https://www.kinopoisk.ru/film/10422567/",
-        meta: { ru: "ЦВЕТОКОРРЕКЦИЯ", en: "COLOR GRADING" },
+        meta: { ru: "КОРОТКОМЕТРАЖНЫЙ ФИЛЬМ / ЦВЕТОКОРРЕКЦИЯ / 2025", en: "SHORT FILM / COLOR GRADING / 2025" },
         imageSize: [1920, 1080],
         images: ["assets/images/quote-01.webp", "assets/images/quote-02.webp", "assets/images/quote-03.webp", "assets/images/quote-04.webp"]
       }
