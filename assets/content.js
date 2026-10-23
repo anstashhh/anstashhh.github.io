@@ -65,6 +65,7 @@ window.PORTFOLIO_CONTENT = {
     projects: [
       {
         title: { ru: "Палата №6", en: "Ward No. 6" },
+        kinopoisk: "https://www.kinopoisk.ru/film/8349782/",
         meta: { ru: "ПОЛНОМЕТРАЖНЫЙ ФИЛЬМ / COLOR GRADING / 2025", en: "FEATURE FILM / COLOR GRADING / 2025" },
         imageSize: [1920, 804],
         images: [
@@ -76,6 +77,7 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         title: { ru: "Автостопом до мечты", en: "Hitchhiking to the Dream" },
+        kinopoisk: "https://www.kinopoisk.ru/film/10852989/",
         meta: { ru: "КОРОТКОМЕТРАЖНЫЙ ФИЛЬМ / COLOR GRADING / 2026", en: "SHORT FILM / COLOR GRADING / 2026" },
         imageSize: [1920, 804],
         images: [
@@ -93,6 +95,7 @@ window.PORTFOLIO_CONTENT = {
       },
       {
         title: { ru: "Это цитата!", en: "It's a Quote!" },
+        kinopoisk: "https://www.kinopoisk.ru/film/10422567/",
         meta: { ru: "ЦВЕТОКОРРЕКЦИЯ", en: "COLOR GRADING" },
         imageSize: [1920, 1080],
         images: ["assets/images/quote-01.webp", "assets/images/quote-02.webp", "assets/images/quote-03.webp", "assets/images/quote-04.webp"]
@@ -107,8 +110,31 @@ window.PORTFOLIO_CONTENT = {
       en: "Compositing for film and advertising, from invisible cleanup to integrating graphics and CG with live-action footage. I work with motion, light, texture, and shot detail to make added elements feel part of the same scene."
     },
     tasks: {
-      ru: ["Ретушь и clean-up: лица, объекты и детали кадра.", "Трекинг и замена экранов.", "Ротоскопинг и интеграция графики в съёмочный материал."],
-      en: ["Beauty retouching and cleanup of objects and shot details.", "Tracking and screen replacement.", "Rotoscoping and integration of graphics with live-action footage."]
+      ru: [
+        "Clean-up кадров разной сложности: удаление объектов, проводов и нежелательных деталей с восстановлением фона.",
+        "Бьюти-ретушь: коррекция кожи и локальных деталей с сохранением естественной фактуры и движения.",
+        "Матт-пейнтинг: создание и доработка фонов, расширение окружения и интеграция в кадр.",
+        "Кеинг: отделение объектов от фона, обработка краёв и цветовых рефлексов.",
+        "Ротоскопинг: маски для персонажей и объектов, работа со сложными контурами.",
+        "Трекинг и замена экранов: привязка графики к движению камеры и объектов.",
+        "Интеграция CG и графики: согласование перспективы, света, цвета, резкости и зерна.",
+        "AI-интеграция: подготовка генеративных элементов и их совмещение с реальным съёмочным материалом."
+      ],
+      en: [
+        "Shot cleanup at varying levels of complexity: removing objects, wires, and unwanted details while reconstructing the background.",
+        "Beauty retouching: refining skin and local details while preserving natural texture and movement.",
+        "Matte painting: creating and extending environments, then integrating them into the shot.",
+        "Keying: extracting subjects, refining edges, and suppressing spill.",
+        "Rotoscoping: isolating subjects and objects, including complex contours.",
+        "Tracking and screen replacement: anchoring graphics to camera and object motion.",
+        "CG and graphics integration: matching perspective, lighting, color, sharpness, and grain.",
+        "AI integration: preparing generated elements and compositing them with live-action footage."
+      ]
+    },
+    aiHeading: { ru: "Генеративное видео и AI-композитинг", en: "Generative video & AI compositing" },
+    aiDescription: {
+      ru: "Создаю полностью генеративные ролики или использую AI для отдельных задач внутри съёмочного проекта: создания фонов, окружения и дополнительных элементов. Выстраиваю ComfyUI-пайплайны и работаю с современными генеративными моделями, включая Seedance 2.5. Подготавливаю результат к монтажу и композитингу: согласовываю движение, свет и цвет, устраняю артефакты и объединяю генерацию с реальным видео в цельное изображение.",
+      en: "I create fully generated videos or use AI for specific tasks within live-action projects, including backgrounds, environments, and additional elements. I build ComfyUI workflows and work with current generative models, including Seedance 2.5. I prepare the results for editing and compositing by matching motion, lighting, and color, addressing artifacts, and bringing generated and filmed elements into a cohesive image."
     },
     showreel: {
       youtube: "https://youtu.be/qvVPLENkPx0",
@@ -161,6 +187,7 @@ window.PORTFOLIO_CONTENT = {
     projects: [
       {
         title: { ru: "ComfyUI Smart Face Crop", en: "ComfyUI Smart Face Crop" },
+        icon: "ComfyUI",
         meta: { ru: "Нода для автоматического обнаружения и кадрирования лиц · GitHub", en: "Automatic face detection and cropping node · GitHub" },
         description: {
           ru: "Нода для ComfyUI, которая находит лица и подготавливает изображения для дальнейшей работы: кадрирует, меняет масштаб и добавляет отступы. Обработка выполняется локально на YuNet. Подходит для подготовки датасетов и автоматизации повторяющихся операций с изображениями.",

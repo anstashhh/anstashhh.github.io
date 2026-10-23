@@ -221,7 +221,7 @@
     if (!list) return;
     list.innerHTML = content.color.projects.map((project) => `
       <article class="project-block">
-        <header class="project-header"><h1>${localized(project.title)}</h1><p>${localized(project.meta)}</p></header>
+        <header class="project-header"><h1>${localized(project.title)}</h1>${project.kinopoisk ? `<a class="project-kinopoisk" href="${escapeHtml(project.kinopoisk)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(localized(project.title))} — КИНОПОИСК">КИНОПОИСК <span aria-hidden="true">↗</span></a>` : ""}<p>${localized(project.meta)}</p></header>
         <div class="stills-grid">${project.images.map((image, imageIndex) => `
           <figure class="still"><img src="${image}" width="${(project.imageSize || [1920, 1080])[0]}" height="${(project.imageSize || [1920, 1080])[1]}" alt="${localized(project.title)}, ${language === "ru" ? "кадр" : "still"} ${imageIndex + 1}" loading="lazy" decoding="async"></figure>
         `).join("")}</div>
@@ -231,7 +231,7 @@
   function renderCompositing() {
     renderVideo(document.querySelector("[data-compositing-showreel]"), content.compositing.showreel, `COMPOSITING ${t("labels.showreel")}`, content.compositing.showreelDuration);
     const notes = document.querySelector("[data-compositing-notes]");
-    if (notes) notes.innerHTML = `<h2>${escapeHtml(localized(content.compositing.heading))}</h2><div><p>${escapeHtml(localized(content.compositing.intro))}</p><ul>${localized(content.compositing.tasks).map((task) => `<li>${escapeHtml(task)}</li>`).join("")}</ul><p class="discipline-notes__tools">Nuke · After Effects · Fusion · DaVinci Resolve</p></div>`;
+    if (notes) notes.innerHTML = `<h2>${escapeHtml(localized(content.compositing.heading))}</h2><div><p>${escapeHtml(localized(content.compositing.intro))}</p><ul>${localized(content.compositing.tasks).map((task) => `<li>${escapeHtml(task)}</li>`).join("")}</ul><h3>${escapeHtml(localized(content.compositing.aiHeading))}</h3><p>${escapeHtml(localized(content.compositing.aiDescription))}</p><p class="discipline-notes__tools">${content.cv.software.map(escapeHtml).join(" · ")}</p></div>`;
     const links = document.querySelector("[data-compositing-links]");
     if (!links) return;
     if (!content.compositing.links.length) {
@@ -260,7 +260,7 @@
       const tag = project.url ? "a" : "div";
       const attributes = `href="${project.url}" target="_blank" rel="noopener noreferrer"`;
       return `<article class="software-entry"><${tag} class="software-row" ${attributes}>
-        <span><strong>${localized(project.title)}</strong><small>${localized(project.meta)}</small></span>
+        <span class="software-row__identity">${project.icon ? `<span class="software-row__logo" aria-hidden="true">${softwareIcon(project.icon)}</span>` : ""}<span><strong>${escapeHtml(localized(project.title))}</strong><small>${escapeHtml(localized(project.meta))}</small></span></span>
         <span class="software-row__arrow" aria-hidden="true">${project.url ? "↗" : "—"}</span>
       </${tag}>${project.description ? `<div class="software-details"><p>${escapeHtml(localized(project.description))}</p>${project.features ? `<ul>${localized(project.features).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}</div>` : ""}</article>`;
     }).join("");
