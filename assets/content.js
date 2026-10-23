@@ -131,11 +131,6 @@ window.PORTFOLIO_CONTENT = {
         "AI integration: preparing generated elements and compositing them with live-action footage."
       ]
     },
-    aiHeading: { ru: "Генеративное видео и AI-композитинг", en: "Generative video & AI compositing" },
-    aiDescription: {
-      ru: "Создаю полностью генеративные ролики или использую AI для отдельных задач внутри съёмочного проекта: создания фонов, окружения и дополнительных элементов. Выстраиваю ComfyUI-пайплайны и работаю с современными генеративными моделями, включая Seedance 2.5. Подготавливаю результат к монтажу и композитингу: согласовываю движение, свет и цвет, устраняю артефакты и объединяю генерацию с реальным видео в цельное изображение.",
-      en: "I create fully generated videos or use AI for specific tasks within live-action projects, including backgrounds, environments, and additional elements. I build ComfyUI workflows and work with current generative models, including Seedance 2.5. I prepare the results for editing and compositing by matching motion, lighting, and color, addressing artifacts, and bringing generated and filmed elements into a cohesive image."
-    },
     showreel: {
       youtube: "https://youtu.be/qvVPLENkPx0",
       vimeo: "https://vimeo.com/1238841970",

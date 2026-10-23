@@ -222,13 +222,13 @@ img, video, iframe { display: block; width: 100%; }
 .portrait.is-empty::after { transform: translate(-50%, -50%) rotate(-45deg); }
 
 .home-cv__copy { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: clamp(1rem, 2vw, 2rem); border-left: 1px solid var(--rule); container-type: inline-size; }
-.home-cv__name { margin: 0 0 0.6rem; color: #3d3f3c; font-size: 0.82rem; font-weight: 400; text-transform: uppercase; }
+.home-cv__name { margin: 0 0 0.8rem; color: #3d3f3c; font: 400 clamp(1.25rem, 2vw, 1.65rem)/1.2 var(--display); text-transform: uppercase; }
 
 .home-cv__title {
   max-width: none;
   margin: 0 0 clamp(1.1rem, 2vw, 2rem);
   font-family: var(--display);
-  font-size: clamp(1.1rem, 7.7cqw, 3.2rem);
+  font-size: clamp(1.1rem, 9.5cqw, 4.2rem);
   font-weight: 300;
   hyphens: none;
   line-height: 0.98;
@@ -669,7 +669,7 @@ img, video, iframe { display: block; width: 100%; }
   .mobile-menu__link.is-active, .mobile-menu__link:hover { color: var(--signal); }
   .home-cv { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) auto; }
   .home-cv__copy { border-left: 0; border-top: 1px solid var(--rule); }
-  .home-cv__title { font-size: clamp(1.25rem, 7cqw, 2.5rem); margin-bottom: 1rem; }
+  .home-cv__title { font-size: clamp(1.25rem, 9.5cqw, 3.2rem); margin-bottom: 1rem; }
   .home-cv .portrait { container-type: size; background: #242424; }
   .home-cv .portrait img { width: min(100%, 81cqh); margin-inline: auto; }
   .cv-intro { grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr); }
@@ -689,7 +689,7 @@ img, video, iframe { display: block; width: 100%; }
   .home-cv { grid-template-columns: 1fr; grid-template-rows: auto; min-height: clamp(10rem, 26svh, 15rem); padding: 1.25rem; }
   .home-cv .portrait, .home-cv__name { display: none; }
   .home-cv__copy { display: flex; justify-content: space-between; gap: 1rem; padding: 0; border: 0; }
-  .home-cv__title { margin: 0; font-size: clamp(1.1rem, 7.7cqw, 2.5rem); }
+  .home-cv__title { margin: 0; font-size: clamp(1.1rem, 9.5cqw, 3rem); }
   .home-cv__link { font-size: clamp(4.5rem, 20vw, 6rem); }
   .home-stack { grid-template-rows: repeat(5, minmax(3.5rem, 1fr)); margin-inline: .5rem; }
   .work-tile { min-height: 3.5rem; padding: .75rem 1rem; }

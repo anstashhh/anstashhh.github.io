@@ -34,7 +34,7 @@
   };
 
   const pages = [
-    ["cv", "cv.html"], ["compositing", "compositing.html"], ["color", "color.html"],
+    ["cv", "cv.html"], ["color", "color.html"], ["compositing", "compositing.html"],
     ["motion", "motion-ai.html"], ["software", "software.html"], ["contacts", "contacts.html"]
   ];
 
@@ -231,7 +231,7 @@
   function renderCompositing() {
     renderVideo(document.querySelector("[data-compositing-showreel]"), content.compositing.showreel, `COMPOSITING ${t("labels.showreel")}`, content.compositing.showreelDuration);
     const notes = document.querySelector("[data-compositing-notes]");
-    if (notes) notes.innerHTML = `<h2>${escapeHtml(localized(content.compositing.heading))}</h2><div><p>${escapeHtml(localized(content.compositing.intro))}</p><ul>${localized(content.compositing.tasks).map((task) => `<li>${escapeHtml(task)}</li>`).join("")}</ul><h3>${escapeHtml(localized(content.compositing.aiHeading))}</h3><p>${escapeHtml(localized(content.compositing.aiDescription))}</p><p class="discipline-notes__tools">${content.cv.software.map(escapeHtml).join(" · ")}</p></div>`;
+    if (notes) notes.innerHTML = `<h2>${escapeHtml(localized(content.compositing.heading))}</h2><div><p>${escapeHtml(localized(content.compositing.intro))}</p><ul>${localized(content.compositing.tasks).map((task) => `<li>${escapeHtml(task)}</li>`).join("")}</ul><p class="discipline-notes__tools">${content.cv.software.map(escapeHtml).join(" · ")}</p></div>`;
     const links = document.querySelector("[data-compositing-links]");
     if (!links) return;
     if (!content.compositing.links.length) {
