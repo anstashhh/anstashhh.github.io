@@ -101,6 +101,15 @@ window.PORTFOLIO_CONTENT = {
   },
 
   compositing: {
+    heading: { ru: "Работа с кадром", en: "Working with the shot" },
+    intro: {
+      ru: "Композитинг для рекламы и кино: от незаметной ретуши до интеграции графики и CG в съёмочный материал. Работаю с деталями кадра, движением, светом и фактурой, чтобы добавленные элементы выглядели частью одной сцены.",
+      en: "Compositing for film and advertising, from invisible cleanup to integrating graphics and CG with live-action footage. I work with motion, light, texture, and shot detail to make added elements feel part of the same scene."
+    },
+    tasks: {
+      ru: ["Ретушь и clean-up: лица, объекты и детали кадра.", "Трекинг и замена экранов.", "Ротоскопинг и интеграция графики в съёмочный материал."],
+      en: ["Beauty retouching and cleanup of objects and shot details.", "Tracking and screen replacement.", "Rotoscoping and integration of graphics with live-action footage."]
+    },
     showreel: {
       youtube: "https://youtu.be/qvVPLENkPx0",
       vimeo: "https://vimeo.com/1238841970",
@@ -128,7 +137,7 @@ window.PORTFOLIO_CONTENT = {
         video: { youtube: "https://youtu.be/mgNyew4q5WI", poster: "assets/images/supreme-poster.webp" }
       },
       {
-        title: { ru: "Заставка", en: "Logo ident" },
+        title: { ru: "Заставка игры / Логотип", en: "Game intro / Logo" },
         meta: { ru: "Motion Design & Modelling", en: "Motion Design & Modelling" },
         role: { ru: "Дизайн логотипа, моделирование, текстурирование, анимация и композитинг.", en: "Logo design, modelling, texturing, animation, and compositing." },
         tools: ["Photoshop", "Blender", "After Effects", "DaVinci Resolve"],
@@ -153,6 +162,14 @@ window.PORTFOLIO_CONTENT = {
       {
         title: { ru: "ComfyUI Smart Face Crop", en: "ComfyUI Smart Face Crop" },
         meta: { ru: "Нода для автоматического обнаружения и кадрирования лиц · GitHub", en: "Automatic face detection and cropping node · GitHub" },
+        description: {
+          ru: "Нода для ComfyUI, которая находит лица и подготавливает изображения для дальнейшей работы: кадрирует, меняет масштаб и добавляет отступы. Обработка выполняется локально на YuNet. Подходит для подготовки датасетов и автоматизации повторяющихся операций с изображениями.",
+          en: "A ComfyUI node that detects faces and prepares images for the next stage: cropping, zooming, and adding padding. Processing runs locally using YuNet. Built for dataset preparation and automating repetitive image-preprocessing tasks."
+        },
+        features: {
+          ru: ["Одиночные изображения и пакетная обработка папок.", "Квадратный кроп, портретное приближение и добавление полей без растяжения лица.", "Выделение нескольких лиц из группового снимка."],
+          en: ["Single-image and batch-folder processing.", "Square crops, portrait close-ups, and padding without stretching facial proportions.", "Extraction of multiple faces from group images."]
+        },
         url: "https://github.com/anstashhh/ComfyUI-Smart-Face-Crop"
       }
     ]

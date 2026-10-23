@@ -16,7 +16,7 @@
         download: "СКАЧАТЬ CV", showreel: "SHOWREEL", addVideo: "ДОБАВЬТЕ ССЫЛКУ НА ВИДЕО", watchVimeo: "ОТКРЫТЬ НА VIMEO",
         projects: "ПРОЕКТЫ", optional: "ОПЦИОНАЛЬНО", watch: "СМОТРЕТЬ", project: "[НАЗВАНИЕ ПРОЕКТА]",
         projectMeta: "[РОЛЬ / ИНСТРУМЕНТЫ / ГОД]", email: "EMAIL", telegram: "TELEGRAM",
-        nextProject: "ОБСУДИТЬ СЛЕДУЮЩИЙ ПРОЕКТ", emptyEmail: "[ВАШ EMAIL]", emptyTelegram: "[ВАШ TELEGRAM]"
+        nextProject: "Давайте обсудим ваш следующий проект", emptyEmail: "[ВАШ EMAIL]", emptyTelegram: "[ВАШ TELEGRAM]"
       }
     },
     en: {
@@ -230,6 +230,8 @@
 
   function renderCompositing() {
     renderVideo(document.querySelector("[data-compositing-showreel]"), content.compositing.showreel, `COMPOSITING ${t("labels.showreel")}`, content.compositing.showreelDuration);
+    const notes = document.querySelector("[data-compositing-notes]");
+    if (notes) notes.innerHTML = `<h2>${escapeHtml(localized(content.compositing.heading))}</h2><div><p>${escapeHtml(localized(content.compositing.intro))}</p><ul>${localized(content.compositing.tasks).map((task) => `<li>${escapeHtml(task)}</li>`).join("")}</ul><p class="discipline-notes__tools">Nuke · After Effects · Fusion · DaVinci Resolve</p></div>`;
     const links = document.querySelector("[data-compositing-links]");
     if (!links) return;
     if (!content.compositing.links.length) {
@@ -257,10 +259,10 @@
     list.innerHTML = content.software.projects.filter((project) => project.url).map((project) => {
       const tag = project.url ? "a" : "div";
       const attributes = `href="${project.url}" target="_blank" rel="noopener noreferrer"`;
-      return `<${tag} class="software-row" ${attributes}>
+      return `<article class="software-entry"><${tag} class="software-row" ${attributes}>
         <span><strong>${localized(project.title)}</strong><small>${localized(project.meta)}</small></span>
         <span class="software-row__arrow" aria-hidden="true">${project.url ? "↗" : "—"}</span>
-      </${tag}>`;
+      </${tag}>${project.description ? `<div class="software-details"><p>${escapeHtml(localized(project.description))}</p>${project.features ? `<ul>${localized(project.features).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}</div>` : ""}</article>`;
     }).join("");
   }
 
