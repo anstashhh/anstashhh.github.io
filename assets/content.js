@@ -6,7 +6,6 @@
 window.PORTFOLIO_CONTENT = {
   identity: {
     name: { ru: "АЛЕКСАНДР НИКОЛЬСКИЙ", en: "ALEKSANDR NIKOLSKII" },
-    shortName: { ru: "А. НИКОЛЬСКИЙ", en: "A. NIKOLSKII" },
     title: {
       ru: "Video Post Production / Motion + AI Specialist",
       en: "Video Post Production / Motion + AI Specialist"
@@ -21,7 +20,7 @@ window.PORTFOLIO_CONTENT = {
     },
     work: [
       {
-        period: "5+ YEARS / БОЛЕЕ 5 ЛЕТ",
+        period: { ru: "БОЛЕЕ 5 ЛЕТ", en: "5+ YEARS" },
         title: { ru: "ВИДЕОПОСТПРОДАКШЕН", en: "VIDEO POST PRODUCTION" },
         text: {
           ru: "Работаю с цветом, изображением и анимацией: выполняю cleanup и ретушь, замену экранов, трекинг и интеграцию элементов в съёмочный материал. Разрабатываю цветовое решение и согласовываю кадры. Среди работ по цветокоррекции — полнометражный фильм «Палата №6» (2025) и короткометражный фильм «Автостопом до мечты» (2026).",
@@ -56,7 +55,11 @@ window.PORTFOLIO_CONTENT = {
   },
 
   color: {
-    showreel: "https://vimeo.com/1221122708?fl=ip&fe=ec",
+    showreel: {
+      youtube: "https://youtu.be/9sJGP11F3fg",
+      vimeo: "https://vimeo.com/1238836744",
+      poster: "assets/images/color-reel-poster.webp"
+    },
     showreelDuration: "",
     projects: [
       {
@@ -97,13 +100,46 @@ window.PORTFOLIO_CONTENT = {
   },
 
   compositing: {
-    showreel: "",
+    showreel: {
+      youtube: "https://youtu.be/qvVPLENkPx0",
+      vimeo: "https://vimeo.com/1238841970",
+      poster: "assets/images/compositing-reel-poster.webp"
+    },
     showreelDuration: "",
     links: []
   },
 
   motion: {
-    projects: []
+    projects: [
+      {
+        title: { ru: "Major Intro", en: "Major Intro" },
+        meta: { ru: "3D Motion Design · Анимация логотипа", en: "3D Motion Design · Logo animation" },
+        role: { ru: "Процедурное моделирование и анимация.", en: "Procedural modelling and animation." },
+        tools: ["Blender", "DaVinci Resolve"],
+        video: { youtube: "https://youtu.be/i5APEgEk8C0", poster: "assets/images/major-poster.webp" }
+      },
+      {
+        title: { ru: "Suprême", en: "Suprême" },
+        meta: { ru: "Generative AI + Композитинг", en: "Generative AI + Compositing" },
+        role: { ru: "Генерация AI-видео и композитинг с реальным съёмочным материалом.", en: "AI video generation and compositing generated footage with live-action material." },
+        tools: ["Kling", "Nuke", "DaVinci Resolve"],
+        video: { youtube: "https://youtu.be/mgNyew4q5WI", poster: "assets/images/supreme-poster.webp" }
+      },
+      {
+        title: { ru: "Заставка", en: "Logo ident" },
+        meta: { ru: "Motion Design & Modelling", en: "Motion Design & Modelling" },
+        role: { ru: "Дизайн логотипа, моделирование, текстурирование, анимация и композитинг.", en: "Logo design, modelling, texturing, animation, and compositing." },
+        tools: ["Photoshop", "Blender", "After Effects", "DaVinci Resolve"],
+        video: { youtube: "https://youtu.be/WEV8Zjbln98", poster: "assets/images/ident-poster.webp" }
+      },
+      {
+        title: { ru: "Финуслуги", en: "Finuslugi" },
+        meta: { ru: "Generative AI + Композитинг с реальным видео", en: "Generative AI + Live-action compositing" },
+        role: { ru: "Генеративное видео, композитинг и моушн-графика.", en: "AI video generation, compositing, and motion graphics." },
+        tools: ["Seedance 2.0", "Nuke", "After Effects", "DaVinci Resolve"],
+        video: { youtube: "https://youtu.be/SFppPFqIfaI", poster: "assets/images/finuslugi-poster.webp" }
+      }
+    ]
   },
 
   software: {
@@ -113,14 +149,9 @@ window.PORTFOLIO_CONTENT = {
     },
     projects: [
       {
-        title: { ru: "GITHUB", en: "GITHUB" },
-        meta: { ru: "КОД / ИНСТРУМЕНТЫ / ЭКСПЕРИМЕНТЫ", en: "CODE / TOOLS / EXPERIMENTS" },
-        url: "https://github.com/anstashhh"
-      },
-      {
-        title: { ru: "ПРИЛОЖЕНИЕ В РАЗРАБОТКЕ", en: "APPLICATION IN DEVELOPMENT" },
-        meta: { ru: "ПОДРОБНОСТИ БУДУТ ПОЗЖЕ", en: "DETAILS COMING SOON" },
-        url: ""
+        title: { ru: "ComfyUI Smart Face Crop", en: "ComfyUI Smart Face Crop" },
+        meta: { ru: "Нода для автоматического обнаружения и кадрирования лиц · GitHub", en: "Automatic face detection and cropping node · GitHub" },
+        url: "https://github.com/anstashhh/ComfyUI-Smart-Face-Crop"
       }
     ]
   },
