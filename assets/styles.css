@@ -533,28 +533,26 @@ img, video, iframe { display: block; width: 100%; }
 .software-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 1px;
+  gap: clamp(.4rem, 2vw, 1.4rem);
+  width: min(100%, 32rem);
   margin-top: 1.6rem;
-  border: 1px solid var(--rule-soft);
-  background: var(--rule-soft);
 }
 
 .software-badge {
   display: grid;
-  grid-template-rows: 3.25rem auto;
-  gap: 0.55rem;
+  grid-template-rows: 2rem auto;
+  gap: 0.4rem;
   place-items: center;
   min-width: 0;
-  padding: 0.8rem 0.35rem;
-  background: var(--black);
+  padding: 0;
   color: var(--paper-muted);
-  font-size: 0.58rem;
+  font-size: 0.55rem;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
 }
 
-.software-badge__icon { display: grid; width: 3.1rem; height: 3.1rem; place-items: center; }
+.software-badge__icon { display: grid; width: clamp(1.5rem, 5vw, 2rem); height: clamp(1.5rem, 5vw, 2rem); place-items: center; }
 .software-badge img { width: 100%; height: 100%; object-fit: contain; }
 
 .cv-footer { display: flex; justify-content: flex-end; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
@@ -674,7 +672,6 @@ img, video, iframe { display: block; width: 100%; }
   .home-cv .portrait img { width: min(100%, 81cqh); margin-inline: auto; }
   .cv-intro { grid-template-columns: minmax(11rem, 15rem) minmax(0, 1fr); }
   .software-intro { grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 3rem; }
-  .software-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 42rem) {
@@ -706,7 +703,7 @@ img, video, iframe { display: block; width: 100%; }
   .cv-intro__title { margin-bottom: 0; font-size: clamp(1rem, 3.8vw, 1.5rem); line-height: 1.12; }
   .cv-intro__title > span { white-space: normal; }
   .cv-row { grid-template-columns: 1fr; gap: 0.7rem; }
-  .software-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .software-badge { font-size: .5rem; }
   .project-link { grid-template-columns: 2.2rem 1fr auto; font-size: 0.78rem; }
   .software-intro { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 3rem; }
   .software-intro h1 { font-size: clamp(4rem, 21vw, 7rem); }

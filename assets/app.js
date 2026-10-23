@@ -221,7 +221,7 @@
     if (!list) return;
     list.innerHTML = content.color.projects.map((project) => `
       <article class="project-block">
-        <header class="project-header"><h1>${localized(project.title)}</h1>${project.kinopoisk ? `<a class="project-kinopoisk" href="${escapeHtml(project.kinopoisk)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(localized(project.title))} — КИНОПОИСК">КИНОПОИСК <span aria-hidden="true">↗</span></a>` : ""}<p>${localized(project.meta)}</p></header>
+        <header class="project-header"><h1>${localized(project.title)}</h1>${project.kinopoisk ? `<a class="project-kinopoisk" href="${escapeHtml(project.kinopoisk)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(localized(project.title))} — ${language === "ru" ? "КИНОПОИСК" : "KINOPOISK"}">${language === "ru" ? "КИНОПОИСК" : "KINOPOISK"} <span aria-hidden="true">↗</span></a>` : ""}<p>${localized(project.meta)}</p></header>
         <div class="stills-grid">${project.images.map((image, imageIndex) => `
           <figure class="still"><img src="${image}" width="${(project.imageSize || [1920, 1080])[0]}" height="${(project.imageSize || [1920, 1080])[1]}" alt="${localized(project.title)}, ${language === "ru" ? "кадр" : "still"} ${imageIndex + 1}" loading="lazy" decoding="async"></figure>
         `).join("")}</div>
@@ -268,7 +268,7 @@
 
   function renderContacts() {
     const heading = document.querySelector("[data-contact-heading]");
-    if (heading) heading.textContent = `${t("labels.nextProject")}.`;
+    if (heading) heading.textContent = t("labels.nextProject");
     const email = document.querySelector("[data-contact-email]");
     const telegram = document.querySelector("[data-contact-telegram]");
     const emailValue = content.contacts.email || t("labels.emptyEmail");
