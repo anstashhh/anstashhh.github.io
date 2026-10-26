@@ -151,6 +151,13 @@ window.PORTFOLIO_CONTENT = {
         video: { youtube: "https://youtu.be/i5APEgEk8C0", poster: "assets/images/major-poster.webp" }
       },
       {
+        title: { ru: "Glow Recipe — Watermelon Glow", en: "Glow Recipe — Watermelon Glow" },
+        meta: { ru: "Generative AI · Полное производство", en: "Generative AI · Full production" },
+        role: { ru: "Полное производство: генерация видео, композитинг и монтаж.", en: "Full production: AI video generation, compositing, and editing." },
+        tools: ["Seedance 2.5", "DaVinci Resolve", "Fusion"],
+        video: { youtube: "https://youtu.be/rjnUqVpi_ks", poster: "assets/images/glow-recipe-poster.webp" }
+      },
+      {
         title: { ru: "Suprême", en: "Suprême" },
         meta: { ru: "Generative AI + Композитинг", en: "Generative AI + Compositing" },
         role: { ru: "Генерация AI-видео и композитинг с реальным съёмочным материалом.", en: "AI video generation and compositing generated footage with live-action material." },
