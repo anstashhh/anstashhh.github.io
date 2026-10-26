@@ -97,8 +97,15 @@
   function renderPortrait(target) {
     const element = document.querySelector(target);
     if (!element) return;
+    if (target === "[data-home-portrait]" && window.matchMedia("(max-width: 42rem)").matches) {
+      element.replaceChildren();
+      return;
+    }
     if (content.identity.portrait) {
-      element.innerHTML = `<img src="${content.identity.portrait}" width="893" height="1600" alt="${localized(content.identity.name)}" fetchpriority="high">`;
+      element.innerHTML = responsiveImage(content.identity.portrait, {
+        width: 893, height: 1600, alt: localized(content.identity.name), loading: "eager", priority: "high",
+        sizes: target === "[data-home-portrait]" ? "(max-width: 64rem) 50vw, 26vw" : "(max-width: 42rem) 30vw, 288px"
+      });
       element.classList.remove("is-empty");
     } else {
       element.textContent = t("labels.portrait");
@@ -120,7 +127,17 @@
     return String(value || "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
   }
 
-  function renderVideo(element, media, label) {
+  // Use the smallest suitable high-quality image, retaining the original WebP fallback.
+  function responsiveImage(src, options = {}) {
+    const { width = 1280, height = 720, alt = "", loading = "lazy", priority = "auto", sizes = "100vw" } = options;
+    const fullWidth = src.endsWith("/portrait.webp") ? 893 : /-poster\.webp$/.test(src) ? 1280 : 1920;
+    const widths = [480, 960, 1440, fullWidth].filter((value, index, values) => value <= fullWidth && values.indexOf(value) === index).sort((a, b) => a - b);
+    const base = src.replace(/\.webp$/, "");
+    const source = src.endsWith(".webp") ? `<source type="image/avif" srcset="${widths.map(w => `${base}-i26-${w}.avif ${w}w`).join(", ")}" sizes="${escapeHtml(sizes)}">` : "";
+    return `<picture>${source}<img src="${escapeHtml(src)}" width="${width}" height="${height}" alt="${escapeHtml(alt)}" loading="${loading}" decoding="async" fetchpriority="${priority}"></picture>`;
+  }
+
+  function renderVideo(element, media, label, duration, index = 0) {
     if (!element) return;
     const config = typeof media === "string" ? { source: media } : (media || {});
     const providers = ["youtube", "vimeo", "source"].filter((key) => config[key] && (key !== "vimeo" || config.vimeoEnabled !== false));
@@ -137,7 +154,7 @@
     const stage = element.querySelector(".video-stage");
     function showPoster() {
       const playLabel = `${language === "ru" ? "Воспроизвести" : "Play"}: ${label}`;
-      stage.innerHTML = `<button class="video-poster" type="button" aria-label="${escapeHtml(playLabel)}">${config.poster ? `<img src="${config.poster}" width="1280" height="720" alt="" decoding="async">` : ""}<span class="video-play" aria-hidden="true"></span><span class="video-poster__label">${language === "ru" ? "СМОТРЕТЬ" : "PLAY"}</span></button>`;
+      stage.innerHTML = `<button class="video-poster" type="button" aria-label="${escapeHtml(playLabel)}">${config.poster ? responsiveImage(config.poster, { loading: index === 0 ? "eager" : "lazy", priority: index === 0 ? "high" : "low", sizes: "(max-width: 100rem) calc(100vw - 3rem), 1600px" }) : ""}<span class="video-play" aria-hidden="true"></span><span class="video-poster__label">${language === "ru" ? "СМОТРЕТЬ" : "PLAY"}</span></button>`;
       stage.querySelector("button").addEventListener("click", mountPlayer);
     }
     function mountPlayer() {
@@ -223,7 +240,7 @@
       <article class="project-block">
         <header class="project-header"><h1>${localized(project.title)}</h1>${project.kinopoisk ? `<a class="project-kinopoisk" href="${escapeHtml(project.kinopoisk)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(localized(project.title))} — ${language === "ru" ? "КИНОПОИСК" : "KINOPOISK"}">${language === "ru" ? "КИНОПОИСК" : "KINOPOISK"} <span aria-hidden="true">↗</span></a>` : ""}<p>${localized(project.meta)}</p></header>
         <div class="stills-grid">${project.images.map((image, imageIndex) => `
-          <figure class="still"><img src="${image}" width="${(project.imageSize || [1920, 1080])[0]}" height="${(project.imageSize || [1920, 1080])[1]}" alt="${localized(project.title)}, ${language === "ru" ? "кадр" : "still"} ${imageIndex + 1}" loading="lazy" decoding="async"></figure>
+          <figure class="still">${responsiveImage(image, { width: (project.imageSize || [1920, 1080])[0], height: (project.imageSize || [1920, 1080])[1], alt: `${localized(project.title)}, ${language === "ru" ? "кадр" : "still"} ${imageIndex + 1}`, sizes: "(max-width: 42rem) calc(100vw - 1.4rem), (max-width: 100rem) calc(50vw - 3rem), 770px" })}</figure>
         `).join("")}</div>
       </article>`).join("");
   }
@@ -248,7 +265,7 @@
     if (!list) return;
     const projects = content.motion.projects.length ? content.motion.projects : [{ title: { ru: t("labels.project"), en: t("labels.project") }, meta: { ru: t("labels.projectMeta"), en: t("labels.projectMeta") }, video: "" }];
     list.innerHTML = projects.map((project, index) => `<article class="motion-project"><header class="project-header"><h1>${escapeHtml(localized(project.title))}</h1><p>${escapeHtml(localized(project.meta))}</p></header><div class="video-shell" data-motion-video="${index}"></div>${project.role ? `<dl class="project-credits"><div><dt>${language === "ru" ? "Моя роль" : "My role"}</dt><dd>${escapeHtml(localized(project.role))}</dd></div><div><dt>${language === "ru" ? "Инструменты" : "Tools"}</dt><dd>${project.tools.map(escapeHtml).join(" · ")}</dd></div></dl>` : ""}</article>`).join("");
-    projects.forEach((project, index) => renderVideo(list.querySelector(`[data-motion-video="${index}"]`), project.video, localized(project.title), project.duration));
+    projects.forEach((project, index) => renderVideo(list.querySelector(`[data-motion-video="${index}"]`), project.video, localized(project.title), project.duration, index));
   }
 
   function renderSoftware() {
@@ -316,6 +333,10 @@
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") setMenu(false);
+  });
+
+  window.matchMedia("(max-width: 42rem)").addEventListener("change", () => {
+    if (page === "home") renderPortrait("[data-home-portrait]");
   });
 
   render();
