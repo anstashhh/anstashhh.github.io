@@ -15,8 +15,8 @@ window.PORTFOLIO_CONTENT = {
 
   cv: {
     about: {
-      ru: "Я специалист по видеопостпродакшену и моушн-дизайну. Создаю 2D- и 3D-графику и анимацию, работаю с цветокоррекцией, композитингом и генеративным AI для рекламы и кино.",
-      en: "I am a video post-production and motion design specialist. I create 2D and 3D graphics and animation, working with color grading, compositing, and generative AI for advertising and film."
+      ru: "Я специалист по видеопостпродакшену и моушн-дизайну. Работаю с видео проектами в разных направлениях: кино, реклама, контент для соцсетей. Создаю 2D и 3D-графику и анимацию, работаю с цветокоррекцией, композитингом и генеративным AI. Провожу личное обучение и менторство по освоению современных инструментов производства медиа контента.",
+      en: "I am a video post-production and motion design specialist. I work on video projects across film, advertising, and social media content. I create 2D and 3D graphics and animation, and work with color grading, compositing, and generative AI. I also offer one-on-one training and mentoring in modern media production tools."
     },
     work: [
       {
