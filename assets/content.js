@@ -20,18 +20,18 @@ window.PORTFOLIO_CONTENT = {
     },
     work: [
       {
-        period: { ru: "БОЛЕЕ 5 ЛЕТ", en: "5+ YEARS" },
-        title: { ru: "ВИДЕОПОСТПРОДАКШЕН", en: "VIDEO POST PRODUCTION" },
+        period: { ru: "", en: "" },
+        title: { ru: "БОЛЕЕ ПЯТИ ЛЕТ В ВИДЕОПРОИЗВОДСТВЕ", en: "OVER FIVE YEARS IN VIDEO PRODUCTION" },
         text: {
-          ru: "Более пяти лет в видеопостпродакшене, свыше 200 выполненных проектов разной сложности. Работал над рекламными проектами для Сбера, Т-Банка, МТС и Кинопоиска. Среди работ по цветокоррекции и композитингу — полнометражный фильм «Палата №6» (2025), короткометражный фильм «Автостопом до мечты» (2026) и полнометражный фильм «Прелюдия» (2026).",
-          en: "Over five years in video post-production, with more than 200 completed projects of varying complexity. I have worked on advertising projects for Sber, T-Bank, MTS, and Kinopoisk. Film work in color grading and compositing includes the feature Ward No. 6 (2025), the short film Hitchhiking to the Dream (2026), and the feature Prelude (2026)."
+          ru: "Свыше 200 выполненных проектов разной сложности. Работал над рекламными проектами для Сбера, Т-Банка, МТС и Кинопоиска. Среди работ по цветокоррекции и композитингу — полнометражный фильм «Палата №6» (2025), короткометражный фильм «Автостопом до мечты» (2026) и полнометражный фильм «Прелюдия» (2026).",
+          en: "More than 200 completed projects of varying complexity. I have worked on advertising projects for Sber, T-Bank, MTS, and Kinopoisk. Film work in color grading and compositing includes the feature Ward No. 6 (2025), the short film Hitchhiking to the Dream (2026), and the feature Prelude (2026)."
         }
       }
     ],
     skills: [
       {
         title: { ru: "Моушн-дизайн и 3D", en: "Motion design & 3D" },
-        text: { ru: "2D- и 3D-дизайн, моушн-дизайн разной сложности.", en: "2D and 3D design and motion graphics of varying complexity." }
+        text: { ru: "2D и 3D моушн-дизайн разной сложности. Моделирование, текстурирование, рендеринг.", en: "2D and 3D motion design of varying complexity. Modelling, texturing, and rendering." }
       },
       {
         title: { ru: "Цветокоррекция и finishing", en: "Color grading & finishing" },

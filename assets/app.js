@@ -213,7 +213,7 @@
     document.querySelectorAll("[data-cv-label]").forEach((el) => { el.textContent = t(`labels.${el.dataset.cvLabel}`); });
 
     const work = document.querySelector("[data-cv-work]");
-    if (work) work.innerHTML = content.cv.work.map((entry) => `<article class="cv-entry"><p class="cv-entry__meta">${localized(entry.period)}</p><h2>${localized(entry.title)}</h2><p>${localized(entry.text)}</p>${entry.bullets ? `<ul class="cv-bullets">${localized(entry.bullets).map((item) => `<li>${item}</li>`).join("")}</ul>` : ""}</article>`).join("");
+    if (work) work.innerHTML = content.cv.work.map((entry) => `<article class="cv-entry">${localized(entry.period) ? `<p class="cv-entry__meta">${localized(entry.period)}</p>` : ""}<h2>${localized(entry.title)}</h2><p>${localized(entry.text)}</p>${entry.bullets ? `<ul class="cv-bullets">${localized(entry.bullets).map((item) => `<li>${item}</li>`).join("")}</ul>` : ""}</article>`).join("");
     const skills = document.querySelector("[data-cv-skills]");
     if (skills) skills.innerHTML = `<ul class="skill-list">${content.cv.skills.map((skill) => `<li><strong>${localized(skill.title)}</strong><span>${localized(skill.text)}</span></li>`).join("")}</ul><div class="software-grid">${content.cv.software.map((software) => `<div class="software-badge"><span class="software-badge__icon">${softwareIcon(software)}</span><span>${software}</span></div>`).join("")}</div>`;
     const education = document.querySelector("[data-cv-education]");
