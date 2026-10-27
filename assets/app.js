@@ -34,8 +34,8 @@
   };
 
   const pages = [
-    ["cv", "cv.html"], ["color", "color.html"], ["compositing", "compositing.html"],
-    ["motion", "motion-ai.html"], ["software", "software.html"], ["contacts", "contacts.html"]
+    ["cv", "cv.html"], ["motion", "motion-ai.html"], ["color", "color.html"],
+    ["compositing", "compositing.html"], ["software", "software.html"], ["contacts", "contacts.html"]
   ];
 
   function t(path) {

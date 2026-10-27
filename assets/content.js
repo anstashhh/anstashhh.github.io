@@ -15,20 +15,24 @@ window.PORTFOLIO_CONTENT = {
 
   cv: {
     about: {
-      ru: "Более пяти лет в видеопостпродакшене, свыше 200 проектов разной сложности. Моушн-дизайн, композитинг и цветокоррекция для рекламы и кино. В портфолио — работа над проектами для Сбера, Т-Банка, МТС и Кинопоиска.",
-      en: "Video post-production specialist with over five years of experience and more than 200 completed projects. Motion design, compositing, and color grading for film and advertising, with projects across financial services, telecommunications, and entertainment."
+      ru: "Я специалист по видеопостпродакшену и моушн-дизайну. Создаю 2D- и 3D-графику и анимацию, работаю с цветокоррекцией, композитингом и генеративным AI для рекламы и кино.",
+      en: "I am a video post-production and motion design specialist. I create 2D and 3D graphics and animation, working with color grading, compositing, and generative AI for advertising and film."
     },
     work: [
       {
         period: { ru: "БОЛЕЕ 5 ЛЕТ", en: "5+ YEARS" },
         title: { ru: "ВИДЕОПОСТПРОДАКШЕН", en: "VIDEO POST PRODUCTION" },
         text: {
-          ru: "Работаю с цветом, изображением и анимацией: выполняю cleanup и ретушь, замену экранов, трекинг и интеграцию элементов в съёмочный материал. Разрабатываю цветовое решение и согласовываю кадры. Среди работ по цветокоррекции — полнометражный фильм «Палата №6» (2025) и короткометражный фильм «Автостопом до мечты» (2026).",
-          en: "My work spans color, compositing, and animation, including cleanup, retouching, screen replacement, tracking, element integration, look development, and shot matching. Color-grading work includes the feature film Ward No. 6 (2025) and the short film Hitchhiking to the Dream (2026)."
+          ru: "Более пяти лет в видеопостпродакшене, свыше 200 выполненных проектов разной сложности. Работал над рекламными проектами для Сбера, Т-Банка, МТС и Кинопоиска. Среди работ по цветокоррекции и композитингу — полнометражный фильм «Палата №6» (2025), короткометражный фильм «Автостопом до мечты» (2026) и полнометражный фильм «Прелюдия» (2026).",
+          en: "Over five years in video post-production, with more than 200 completed projects of varying complexity. I have worked on advertising projects for Sber, T-Bank, MTS, and Kinopoisk. Film work in color grading and compositing includes the feature Ward No. 6 (2025), the short film Hitchhiking to the Dream (2026), and the feature Prelude (2026)."
         }
       }
     ],
     skills: [
+      {
+        title: { ru: "Моушн-дизайн и 3D", en: "Motion design & 3D" },
+        text: { ru: "2D- и 3D-дизайн, моушн-дизайн разной сложности.", en: "2D and 3D design and motion graphics of varying complexity." }
+      },
       {
         title: { ru: "Цветокоррекция и finishing", en: "Color grading & finishing" },
         text: { ru: "Построение цветового решения, matching кадров, вторичная коррекция и подготовка финального изображения.", en: "Look development, shot matching, secondary grading, and final image preparation." }
@@ -38,12 +42,8 @@ window.PORTFOLIO_CONTENT = {
         text: { ru: "Сборка многослойных кадров, clean-up, трекинг, ротоскопинг и интеграция графики.", en: "Layered shot assembly, clean-up, tracking, rotoscoping, and graphics integration." }
       },
       {
-        title: { ru: "Моушн-дизайн и 3D", en: "Motion design & 3D" },
-        text: { ru: "Анимация типографики и графических систем, построение простых 3D-сцен и рендер-пайплайна.", en: "Typographic and graphic-system animation, lightweight 3D scenes, and render pipelines." }
-      },
-      {
         title: { ru: "Generative AI и автоматизация", en: "Generative AI & automation" },
-        text: { ru: "Разработка ComfyUI-пайплайнов, интеграция генеративных инструментов и автоматизация производства.", en: "ComfyUI pipeline development, generative-tool integration, and production automation." }
+        text: { ru: "Разработка AI-пайплайнов, интеграция генеративных инструментов и автоматизация производства.", en: "AI pipeline development, generative-tool integration, and production automation." }
       }
     ],
     software: ["DaVinci Resolve", "After Effects", "Fusion", "Nuke", "Blender", "ComfyUI"],
