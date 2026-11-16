@@ -158,6 +158,20 @@ window.PORTFOLIO_CONTENT = {
         video: { youtube: "https://youtu.be/rjnUqVpi_ks", poster: "assets/images/glow-recipe-poster.webp" }
       },
       {
+        title: { ru: "Wayly tea - UGC Ai", en: "Wayly tea - UGC Ai" },
+        meta: { ru: "Generative AI UGC Creator", en: "Generative AI UGC Creator" },
+        role: { ru: "Полное производство: генерация и монтаж.", en: "Full production: generation and editing." },
+        tools: ["Van 3.0", "DaVinci Resolve"],
+        video: { youtube: "https://youtube.com/shorts/IAwKeBMzgjQ?feature=share", poster: "assets/images/wayly-tea-poster.webp" }
+      },
+      {
+        title: { ru: "Sber Banner", en: "Sber Banner" },
+        meta: { ru: "Motion Design 2D + 3D", en: "Motion Design 2D + 3D" },
+        role: { ru: "Полное производство: 2D и 3D моушн-дизайн.", en: "Full production: 2D and 3D motion design." },
+        tools: ["After Effects", "Blender"],
+        video: { youtube: "https://youtu.be/oCrTJsoM_V4", poster: "assets/images/sber-banner-poster.webp" }
+      },
+      {
         title: { ru: "Suprême", en: "Suprême" },
         meta: { ru: "Generative AI + Композитинг", en: "Generative AI + Compositing" },
         role: { ru: "Генерация AI-видео и композитинг с реальным съёмочным материалом.", en: "AI video generation and compositing generated footage with live-action material." },
