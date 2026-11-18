@@ -724,6 +724,7 @@ picture { display: block; }
   .contact-link { grid-template-columns: 1fr auto; gap: 0.4rem 1rem; font-size: 1.9rem; }
   .contact-link span:nth-child(2) { display: none; }
   .contact-link span:nth-child(3) { grid-row: 2; color: var(--black); font-family: var(--mono); font-size: 0.95rem; }
+  .contact-link:not(:first-of-type):not(.contact-link--primary) span:nth-child(3) { color: var(--paper); }
   .contact-link span:last-child { grid-column: 2; grid-row: 1 / span 2; }
 }
 

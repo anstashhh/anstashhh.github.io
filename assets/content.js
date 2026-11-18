@@ -219,7 +219,7 @@ window.PORTFOLIO_CONTENT = {
   },
 
   contacts: {
-    email: "",
+    email: "anstashhh@gmail.com",
     telegram: "@anstashhh"
   }
 };
